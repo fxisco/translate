@@ -11,5 +11,9 @@ func main() {
 
 	flag.Parse()
 
-	fmt.Printf("%v %v", source, dest)
+	for _, value := range flag.Args() {
+		fmt.Println(value)
+	}
+
+	fmt.Printf("%v %v", *source, *dest)
 }
